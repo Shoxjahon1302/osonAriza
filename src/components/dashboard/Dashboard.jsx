@@ -23,9 +23,15 @@ export default function Dashboard() {
             </ListItem>
           </Link>
           <Link to={"/create"}>
-            <ListItem className="gap-[6px] font-['Inter'] hover:bg-blue-400 rounded hover:text-white duration-200 mb-6 text-sm font-normal not-italic tracking-[-0.14px]">
+            <ListItem className="gap-[6px] font-['Inter'] hover:bg-blue-400 rounded hover:text-white duration-200 text-sm font-normal not-italic tracking-[-0.14px]">
               <PiCirclesFour />
               Yangi Ariza yaratish
+            </ListItem>
+          </Link>
+          <Link to={"/card"}>
+            <ListItem className="gap-[6px] font-['Inter'] hover:bg-blue-400 rounded hover:text-white duration-200 mb-6 text-sm font-normal not-italic tracking-[-0.14px]">
+              <PiCirclesFour />
+              Card
             </ListItem>
           </Link>
         </List>

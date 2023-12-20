@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Login() {
-  const [loading, setLoading] = useState();
   return (
     <div className="flex items-center justify-center h-screen">
       <form className="flex flex-col items-center justify-center gap-3">

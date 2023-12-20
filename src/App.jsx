@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/login/Login";
 import BarchaArizalar from "./pages/allariza/BarchaArizalar";
 import YangiAriza from "./pages/allariza/YangiAriza";
+import Card from "./pages/allariza/Card";
 function App() {
   const router = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ function App() {
         {
           path: "create",
           element: <YangiAriza />,
+        },
+        {
+          path: "card",
+          element: <Card />,
         },
       ],
     },
