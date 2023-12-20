@@ -4,7 +4,6 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { PiCirclesFour } from "react-icons/pi";
 import { Link, Outlet } from "react-router-dom";
 import Dropdown from "../dropdowns/Dropdown";
-import CardPage from "../../pages/allariza/Card";
 
 export default function Dashboard() {
   return (
@@ -49,9 +48,6 @@ export default function Dashboard() {
             Barcha Arizalar
           </h1>
           <Dropdown />
-        </div>
-        <div className="p-5">
-          <CardPage />
         </div>
         <div className="m-5">
           <Outlet />

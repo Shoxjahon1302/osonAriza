@@ -12,16 +12,16 @@ function App() {
       element: <Dashboard />,
       children: [
         {
+          path: "",
+          element: <Card />,
+        },
+        {
           path: "arizalar",
           element: <BarchaArizalar />,
         },
         {
           path: "create",
           element: <YangiAriza />,
-        },
-        {
-          path: "card",
-          element: <Card />,
         },
       ],
     },
