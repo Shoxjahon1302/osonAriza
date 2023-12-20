@@ -3,13 +3,8 @@ import { IoExitOutline } from "react-icons/io5";
 import { FaRegUserCircle } from "react-icons/fa";
 import { PiCirclesFour } from "react-icons/pi";
 import { Link, Outlet } from "react-router-dom";
-import {
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
-  Button,
-} from "@material-tailwind/react";
+
+import Dropdown from "../dropdowns/Dropdown";
 
 export default function Dashboard() {
   return (
@@ -47,19 +42,7 @@ export default function Dashboard() {
           <h1 className="text-[#111] font-['Inter'] text-xl not-italic font-medium tracking-[-0.2px]">
             Barcha Arizalar
           </h1>
-          <Menu>
-            <MenuHandler>
-              <Button className="text-black flex items-center gap-1">
-                <FaRegUserCircle />
-                Mening profilim
-              </Button>
-            </MenuHandler>
-            <MenuList>
-              <MenuItem>Menu Item 1</MenuItem>
-              <MenuItem>Menu Item 2</MenuItem>
-              <MenuItem>Menu Item 3</MenuItem>
-            </MenuList>
-          </Menu>
+          <Dropdown />
         </div>
         <Outlet />
       </div>
