@@ -10,7 +10,11 @@ export default function Dashboard() {
   return (
     <div className="w-full flex">
       <Card className="h-screen border w-full p-3 pt-[30px] rounded-none shadow-none max-w-[263px] border-[#EEE]">
-        <Link to={"/"} className="mb-14"></Link>
+        <img
+          src="https://www.smartgov.tech/wp-content/uploads/2022/01/smart-gov.png"
+          alt=""
+          className="w-[120px] ml-5 cursor-pointer mb-3"
+        />
         <List className="">
           <Link to={"/arizalar"}>
             <ListItem className="gap-[6px] hover:bg-blue-400 rounded hover:text-white duration-200 font-['Inter'] text-sm font-normal not-italic tracking-[-0.14px]">
@@ -18,7 +22,7 @@ export default function Dashboard() {
               Barcha Arizalar
             </ListItem>
           </Link>
-          <Link to={"/panel/userorganization"}>
+          <Link to={"/create"}>
             <ListItem className="gap-[6px] font-['Inter'] hover:bg-blue-400 rounded hover:text-white duration-200 mb-6 text-sm font-normal not-italic tracking-[-0.14px]">
               <PiCirclesFour />
               Yangi Ariza yaratish
@@ -44,7 +48,9 @@ export default function Dashboard() {
           </h1>
           <Dropdown />
         </div>
-        <Outlet />
+        <div className="m-5">
+          <Outlet />
+        </div>
       </div>
     </div>
   );

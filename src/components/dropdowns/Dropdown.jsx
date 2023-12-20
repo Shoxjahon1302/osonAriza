@@ -7,6 +7,7 @@ import {
   Button,
 } from "@material-tailwind/react";
 import { FaRegUserCircle } from "react-icons/fa";
+import { IoSettingsOutline } from "react-icons/io5";
 
 export default function Dropdown() {
   return (
@@ -18,9 +19,10 @@ export default function Dropdown() {
         </Button>
       </MenuHandler>
       <MenuList>
-        <MenuItem>Menu Item 1</MenuItem>
-        <MenuItem>Menu Item 2</MenuItem>
-        <MenuItem>Menu Item 3</MenuItem>
+        <MenuItem className="flex items-center gap-1">
+          <IoSettingsOutline />
+          Sozlamar
+        </MenuItem>
       </MenuList>
     </Menu>
   );

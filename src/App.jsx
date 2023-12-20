@@ -3,6 +3,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/login/Login";
 import BarchaArizalar from "./pages/allariza/BarchaArizalar";
+import YangiAriza from "./pages/allariza/YangiAriza";
 function App() {
   const router = createBrowserRouter([
     {
@@ -12,6 +13,10 @@ function App() {
         {
           path: "arizalar",
           element: <BarchaArizalar />,
+        },
+        {
+          path: "create",
+          element: <YangiAriza />,
         },
       ],
     },
