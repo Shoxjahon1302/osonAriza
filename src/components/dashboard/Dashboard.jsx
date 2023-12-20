@@ -3,18 +3,20 @@ import { IoExitOutline } from "react-icons/io5";
 import { FaRegUserCircle } from "react-icons/fa";
 import { PiCirclesFour } from "react-icons/pi";
 import { Link, Outlet } from "react-router-dom";
-
 import Dropdown from "../dropdowns/Dropdown";
+import CardPage from "../../pages/allariza/Card";
 
 export default function Dashboard() {
   return (
     <div className="w-full flex">
       <Card className="h-screen border w-full p-3 pt-[30px] rounded-none shadow-none max-w-[263px] border-[#EEE]">
-        <img
-          src="https://www.smartgov.tech/wp-content/uploads/2022/01/smart-gov.png"
-          alt=""
-          className="w-[120px] ml-5 cursor-pointer mb-3"
-        />
+        <Link to={"/"}>
+          <img
+            src="https://www.smartgov.tech/wp-content/uploads/2022/01/smart-gov.png"
+            alt=""
+            className="w-[120px] ml-5 cursor-pointer mb-3"
+          />
+        </Link>
         <List className="">
           <Link to={"/arizalar"}>
             <ListItem className="gap-[6px] hover:bg-blue-400 rounded hover:text-white duration-200 font-['Inter'] text-sm font-normal not-italic tracking-[-0.14px]">
@@ -26,12 +28,6 @@ export default function Dashboard() {
             <ListItem className="gap-[6px] font-['Inter'] hover:bg-blue-400 rounded hover:text-white duration-200 text-sm font-normal not-italic tracking-[-0.14px]">
               <PiCirclesFour />
               Yangi Ariza yaratish
-            </ListItem>
-          </Link>
-          <Link to={"/card"}>
-            <ListItem className="gap-[6px] font-['Inter'] hover:bg-blue-400 rounded hover:text-white duration-200 mb-6 text-sm font-normal not-italic tracking-[-0.14px]">
-              <PiCirclesFour />
-              Card
             </ListItem>
           </Link>
         </List>
@@ -53,6 +49,9 @@ export default function Dashboard() {
             Barcha Arizalar
           </h1>
           <Dropdown />
+        </div>
+        <div className="p-5">
+          <CardPage />
         </div>
         <div className="m-5">
           <Outlet />
