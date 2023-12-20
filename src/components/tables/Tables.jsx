@@ -10,19 +10,19 @@ const TABLE_ROWS = [
     ariza: "Ko'rib chiqilmoqda",
   },
   {
-    name: "John Michael",
+    name: "John Smith",
     job: "Manager",
     date: "23/04/18",
     ariza: "Ko'rib chiqilmoqda",
   },
   {
-    name: "John Michael",
+    name: "John Micael",
     job: "Manager",
     date: "23/04/18",
     ariza: "Ko'rib chiqilmoqda",
   },
   {
-    name: "John Michael",
+    name: "Jasur Holmirzayev",
     job: "Manager",
     date: "23/04/18",
     ariza: "Ko'rib chiqilmoqda",
@@ -55,7 +55,6 @@ export function Tables() {
           {TABLE_ROWS.map(({ name, job, date, ariza }, index) => {
             const isLast = index === TABLE_ROWS.length - 1;
             const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
-
             return (
               <tr key={name}>
                 <td className={classes}>

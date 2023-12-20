@@ -10,7 +10,6 @@ function App() {
     {
       path: "/",
       element: <Dashboard />,
-      index,
       children: [
         {
           path: "arizalar",
