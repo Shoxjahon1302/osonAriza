@@ -1,8 +1,9 @@
 import React from "react";
-
+import ParticlePage from "../../components/particles/ParticlePage";
 export default function Login() {
   return (
     <div className="flex items-center justify-center h-screen">
+      <ParticlePage />
       <form className="flex flex-col items-center justify-center gap-3">
         <h1 className="text-2xl font-['Inter']">Tizimga kirish</h1>
         <input

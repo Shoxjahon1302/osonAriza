@@ -18,13 +18,13 @@ export default function Dashboard() {
         </Link>
         <List className="">
           <Link to={"/arizalar"}>
-            <ListItem className="gap-[6px] hover:bg-blue-400 rounded hover:text-white duration-200 font-['Inter'] text-sm font-normal not-italic tracking-[-0.14px]">
+            <ListItem className="gap-[6px] rounded duration-200 font-['Inter'] text-sm font-normal not-italic tracking-[-0.14px]">
               <FaRegUserCircle />
               Barcha Arizalar
             </ListItem>
           </Link>
           <Link to={"/create"}>
-            <ListItem className="gap-[6px] font-['Inter'] hover:bg-blue-400 rounded hover:text-white duration-200 text-sm font-normal not-italic tracking-[-0.14px]">
+            <ListItem className="gap-[6px] font-['Inter'] rounded duration-200 text-sm font-normal not-italic tracking-[-0.14px]">
               <PiCirclesFour />
               Yangi Ariza yaratish
             </ListItem>
