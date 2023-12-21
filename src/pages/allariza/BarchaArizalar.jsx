@@ -1,7 +1,7 @@
 import React from "react";
-import { Tables } from "../../components/tables/Tables";
 import { Link } from "react-router-dom";
 import { Button } from "@material-tailwind/react";
+import Table1 from "../../components/tables/Table1";
 export default function BarchaArizalar() {
   return (
     <div className="mt-4 px-3">
@@ -12,7 +12,7 @@ export default function BarchaArizalar() {
           </Button>
         </Link>
       </div>
-      <Tables />
+      <Table1 />
     </div>
   );
 }

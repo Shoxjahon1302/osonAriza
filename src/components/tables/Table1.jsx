@@ -3,26 +3,38 @@ import { useState } from "react";
 import { FaPen } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import { RiDeleteBin5Line } from "react-icons/ri";
-const TABLE_HEAD = ["Nomi", "Arizalar", ""];
+
+const TABLE_HEAD = ["Ismi", "Kasbi", "Vaqti", ""];
+
 const TABLE_ROWS = [
   {
     name: "John Michael",
-    job: 32,
+    job: "Manager",
+    date: "23/04/18",
   },
   {
-    name: "John Smith",
-    job: 34,
+    name: "Alexa Liras",
+    job: "Developer",
+    date: "23/04/18",
   },
   {
-    name: "John Micael",
-    job: 54,
+    name: "Laurent Perrier",
+    job: "Executive",
+    date: "19/09/17",
   },
   {
-    name: "Jasur Holmirzayev",
-    job: 67,
+    name: "Michael Levi",
+    job: "Developer",
+    date: "24/12/08",
+  },
+  {
+    name: "Richard Gran",
+    job: "Manager",
+    date: "04/10/21",
   },
 ];
-export function Tables() {
+
+export default function Table1() {
   const [open, setOpen] = useState(false);
   return (
     <Card className="h-full w-full">
@@ -46,11 +58,12 @@ export function Tables() {
           </tr>
         </thead>
         <tbody>
-          {TABLE_ROWS.map(({ name, job, date, ariza }, index) => {
+          {TABLE_ROWS.map(({ name, job, date }, index) => {
             const isLast = index === TABLE_ROWS.length - 1;
             const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
+
             return (
-              <tr key={name} className="mt-3">
+              <tr key={name}>
                 <td className={classes}>
                   <Typography
                     variant="small"
@@ -67,6 +80,15 @@ export function Tables() {
                     className="font-normal"
                   >
                     {job}
+                  </Typography>
+                </td>
+                <td className={classes}>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="font-normal"
+                  >
+                    {date}
                   </Typography>
                 </td>
                 <td className={classes}>
@@ -103,6 +125,11 @@ export function Tables() {
               type="text"
               placeholder="nomi"
               className="bg-[#f8f8f8] outline-none py-3 px-2 rounded-md w-full mt-8"
+            />
+            <input
+              type="text"
+              placeholder="nomi"
+              className="bg-[#f8f8f8] outline-none py-3 px-2 rounded-md w-full mt-3"
             />
             <button className="bg-green-500 text-white p-[12px_24px] w-full rounded-md hover:bg-green-600 duration-200 mt-6">
               O'zgartirsh

@@ -7,6 +7,7 @@ import YangiAriza from "./pages/allariza/YangiAriza";
 import Card from "./pages/allariza/Card";
 import Bulimlar from "./pages/allariza/Bulimlar";
 import YangiBulim from "./pages/allariza/YangiBulim";
+import Cards from "./pages/allariza/Cards";
 function App() {
   const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ function App() {
         {
           path: "create1",
           element: <YangiBulim />,
+        },
+        {
+          path: "cards",
+          element: <Cards />,
         },
       ],
     },
