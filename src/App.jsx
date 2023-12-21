@@ -6,7 +6,10 @@ import ParticlePage from "./components/particles/ParticlePage";
 import BarchaArizalar from "./pages/allariza/BarchaArizalar";
 import YangiAriza from "./pages/allariza/YangiAriza";
 import Card from "./pages/allariza/Card";
-import Particles from "react-particles";
+// import Notification from "./components/notification/Notification";
+{
+  /* <Notification /> */
+}
 function App() {
   const router = createBrowserRouter([
     {
@@ -32,12 +35,11 @@ function App() {
       element: <Login />,
     },
   ]);
+
   return (
     <>
       <RouterProvider router={router} />
       {/* 1-barcha ariza */}
-      <ParticlePage />
-     
       {/* 2- bajarilmoqda */}
       {/* 3-bajarilgan */}
       {/* 4-muddati utgan */}

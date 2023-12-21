@@ -2,8 +2,8 @@ import { Card, List, ListItem } from "@material-tailwind/react";
 import { IoExitOutline } from "react-icons/io5";
 import { FaRegUserCircle } from "react-icons/fa";
 import { PiCirclesFour } from "react-icons/pi";
+import { Button } from "@material-tailwind/react";
 import { Link, Outlet } from "react-router-dom";
-import Dropdown from "../dropdowns/Dropdown";
 
 export default function Dashboard() {
   return (
@@ -20,13 +20,7 @@ export default function Dashboard() {
           <Link to={"/arizalar"}>
             <ListItem className="gap-[6px] rounded duration-200 font-['Inter'] text-sm font-normal not-italic tracking-[-0.14px]">
               <FaRegUserCircle />
-              Barcha Arizalar
-            </ListItem>
-          </Link>
-          <Link to={"/create"}>
-            <ListItem className="gap-[6px] font-['Inter'] rounded duration-200 text-sm font-normal not-italic tracking-[-0.14px]">
-              <PiCirclesFour />
-              Yangi Ariza yaratish
+              Arizalar
             </ListItem>
           </Link>
         </List>
@@ -44,10 +38,16 @@ export default function Dashboard() {
       </Card>
       <div className="w-full">
         <div className="flex border-b items-center justify-between p-[18px_20px]">
-          <h1 className="text-[#111] font-['Inter'] text-xl not-italic font-medium tracking-[-0.2px]">
+          <h1 className="text-[#111] font-['Inter'] text-xl not-italic font-medium tracking-[-0.2px] w-full">
             Barcha Arizalar
           </h1>
-          <Dropdown />
+          <div className="flex items-end justify-end w-full">
+            <Link to={"/create"}>
+              <Button className="bg-green-500 font-['Inter'] font-medium">
+                Yangi ariza yaratish
+              </Button>
+            </Link>
+          </div>
         </div>
         <div className="m-5">
           <Outlet />
