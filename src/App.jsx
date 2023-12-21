@@ -2,14 +2,11 @@ import "./App.css";
 import Dashboard from "./components/dashboard/Dashboard";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/login/Login";
-import ParticlePage from "./components/particles/ParticlePage";
 import BarchaArizalar from "./pages/allariza/BarchaArizalar";
 import YangiAriza from "./pages/allariza/YangiAriza";
 import Card from "./pages/allariza/Card";
-// import Notification from "./components/notification/Notification";
-{
-  /* <Notification /> */
-}
+import Bulimlar from "./pages/allariza/Bulimlar";
+import YangiBulim from "./pages/allariza/YangiBulim";
 function App() {
   const router = createBrowserRouter([
     {
@@ -28,6 +25,14 @@ function App() {
           path: "create",
           element: <YangiAriza />,
         },
+        {
+          path: "part",
+          element: <Bulimlar />,
+        },
+        {
+          path: "create1",
+          element: <YangiBulim />,
+        },
       ],
     },
     {
@@ -39,10 +44,6 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
-      {/* 1-barcha ariza */}
-      {/* 2- bajarilmoqda */}
-      {/* 3-bajarilgan */}
-      {/* 4-muddati utgan */}
     </>
   );
 }
